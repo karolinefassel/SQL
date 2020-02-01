@@ -1,0 +1,47 @@
+SELECT
+select * from nometabela; //selecionando uma tabela inteira
+select numnota from nometabela; //selecionando um item especifico da tabela(numnota)
+
+---------------------------------
+WHERE
+select*from nometabela where numnota = 50 //seleciona todos os itens da tabela que forem igual a 50
+
+---------------------------------
+CRUD SQL
+
+CREATE DATABASE nomebanco;      //cria um banco de dados
+
+use nomebanco;                  //usa esse banco criado pra criar dentro dele tabelas
+
+create table nometabela(        //abre parenteses da criação da tabela
+id_item integer auto_incremento not null, //id do item é um valor que autoincrementa sozinho, conforme inserção
+nome varchar(45) not null,      //campos com not null não permitem ficarem vazios.
+telefone varchar(10)            //varchar é o tipo de dado para letras e numeros, assim como integer se usa pra numeros
+);                              //fecha parenteses
+
+---------------------------------
+INSERT
+
+INSERT INTO cliente(nome, telefone, endereço)
+values('Karoline','33445566','Porto Alegre'); //os valores contidos em values são referente respectivamente aos contindos na linha de cima em cliente
+
+---------------------------------
+DROP
+
+DROP TABLE nome_da_tabela; //só usar quando quiser excluir a tabela inteira
+
+---------------------------------
+ALTER
+
+ALTER table nome_da_tabela  ADD column nome_da_coluna tipo_de_dado;
+
+---------------------------------
+UPDATE
+
+UPDATE nome_tabela SET nome_coluna = 'novo_valor' WHERE nome_coluna = 'antigo_valor';
+
+---------------------------------
+DELETE
+
+DELETE FROM  nome_tabela WHERE()condição //importante utilizar uma condição para excluir, pois caso contrario tudo sera excluido
+
